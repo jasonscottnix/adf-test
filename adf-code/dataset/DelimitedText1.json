@@ -10,6 +10,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@concat('emp_', formatDateTime(utcnow(), 'yyyyMMdd_HHmmss'), '.txt')",
+					"type": "Expression"
+				},
 				"folderPath": "output",
 				"container": "adftutorial"
 			},
