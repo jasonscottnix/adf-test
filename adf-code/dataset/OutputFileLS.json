@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@concat('emp_', formatDateTime(utcnow(), 'yyyyMMdd_HHmmss'), '.txt')",
+					"value": "@concat('emp_', formatDateTime(convertTimeZone(utcnow(),'UTC','Eastern Standard Time'), 'yyyyMMdd_HHmmss'), '.txt')",
 					"type": "Expression"
 				},
 				"folderPath": "output",
