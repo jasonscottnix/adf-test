@@ -128,7 +128,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "OutputFileLS",
 						"type": "DatasetReference"
 					}
 				]
