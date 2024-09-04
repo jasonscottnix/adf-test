@@ -1,5 +1,5 @@
 {
-	"name": "dataflow2",
+	"name": "PopulateStoreListDataFlow",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
