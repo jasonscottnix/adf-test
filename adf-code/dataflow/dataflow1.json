@@ -9,14 +9,14 @@
 						"referenceName": "LotterySalesCSV",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "LotterySalesDataCSV"
 				},
 				{
 					"dataset": {
 						"referenceName": "AzureSqlTable2",
 						"type": "DatasetReference"
 					},
-					"name": "source2"
+					"name": "RaceTracStoreIDSource"
 				}
 			],
 			"sinks": [
@@ -25,18 +25,18 @@
 						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
 					},
-					"name": "sink1"
+					"name": "LotterySalesSilverTable"
 				}
 			],
 			"transformations": [
 				{
-					"name": "derivedColumn1"
+					"name": "DeriveTransactionDate"
 				},
 				{
-					"name": "lookup1"
+					"name": "LookupStoreId"
 				},
 				{
-					"name": "derivedColumn2"
+					"name": "DeriveStoreIdToInteger"
 				}
 			],
 			"scriptLines": [
@@ -63,7 +63,7 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
+				"     ignoreNoFilesFound: false) ~> LotterySalesDataCSV",
 				"source(output(",
 				"          RaceTracStoreId as integer,",
 				"          IGTStoreId as integer",
@@ -71,19 +71,19 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> source2",
-				"source1 derive(TransDate = toDate(\r",
+				"     format: 'table') ~> RaceTracStoreIDSource",
+				"LotterySalesDataCSV derive(TransDate = toDate(\r",
 				"    substring(Column_1, 5, 4) + '-' + \r",
 				"    substring(Column_1, 1, 2) + '-' + \r",
 				"    substring(Column_1, 3, 2), \r",
 				"    'yyyy-MM-dd'\r",
-				")) ~> derivedColumn1",
-				"derivedColumn2, source2 lookup(Column_2 == IGTStoreId,",
+				")) ~> DeriveTransactionDate",
+				"DeriveStoreIdToInteger, RaceTracStoreIDSource lookup(Column_2 == IGTStoreId,",
 				"     multiple: false,",
 				"     pickup: 'any',",
-				"     broadcast: 'auto')~> lookup1",
-				"derivedColumn1 derive(Column_2 = toInteger(Column_2)) ~> derivedColumn2",
-				"lookup1 sink(allowSchemaDrift: true,",
+				"     broadcast: 'auto')~> LookupStoreId",
+				"DeriveTransactionDate derive(Column_2 = toInteger(Column_2)) ~> DeriveStoreIdToInteger",
+				"LookupStoreId sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          ID as integer,",
@@ -135,7 +135,7 @@
 				"          Curr13 = Column_17,",
 				"          Curr14 = Column_18,",
 				"          Curr15 = Column_19",
-				"     )) ~> sink1"
+				"     )) ~> LotterySalesSilverTable"
 			]
 		}
 	}
