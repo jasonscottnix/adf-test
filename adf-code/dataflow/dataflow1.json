@@ -117,7 +117,7 @@
 				"     errorHandlingOption: 'stopOnFirstError',",
 				"     mapColumn(",
 				"          TransactionDate = TransDate,",
-				"          StoreID = Column_2,",
+				"          StoreID = RaceTracStoreId,",
 				"          TerminalID = Column_3,",
 				"          State = Column_4,",
 				"          Curr1 = Column_5,",
