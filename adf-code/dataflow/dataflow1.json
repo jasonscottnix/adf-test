@@ -78,7 +78,28 @@
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          TransactionDate = Column_1,",
+				"          StoreID = Column_2,",
+				"          TerminalID = Column_3,",
+				"          State = Column_4,",
+				"          Curr1 = Column_5,",
+				"          Curr2 = Column_6,",
+				"          Curr3 = Column_7,",
+				"          Curr4 = Column_8,",
+				"          Curr5 = Column_9,",
+				"          Curr6 = Column_10,",
+				"          Curr7 = Column_11,",
+				"          Curr8 = Column_12,",
+				"          Curr9 = Column_13,",
+				"          Curr10 = Column_14,",
+				"          Curr11 = Column_15,",
+				"          Curr12 = Column_16,",
+				"          Curr13 = Column_17,",
+				"          Curr14 = Column_18,",
+				"          Curr15 = Column_19",
+				"     )) ~> sink1"
 			]
 		}
 	}
