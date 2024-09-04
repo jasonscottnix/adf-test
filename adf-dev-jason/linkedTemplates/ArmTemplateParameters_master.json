@@ -11,6 +11,9 @@
 		"AzureStorageLinkedService_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabaseLinkedService_properties_typeProperties_server": {
 			"value": "adfdemo-dbserver.database.windows.net"
 		},
