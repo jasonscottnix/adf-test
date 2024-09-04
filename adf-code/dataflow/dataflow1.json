@@ -12,7 +12,15 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
 			"transformations": [],
 			"scriptLines": [
 				"source(output(",
@@ -20,7 +28,39 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1"
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          ID as integer,",
+				"          TransactionDate as date,",
+				"          StoreID as integer,",
+				"          TerminalID as integer,",
+				"          State as string,",
+				"          Curr1 as decimal(10,2),",
+				"          Curr2 as decimal(10,2),",
+				"          Curr3 as decimal(10,2),",
+				"          Curr4 as decimal(10,2),",
+				"          Curr5 as decimal(10,2),",
+				"          Curr6 as decimal(10,2),",
+				"          Curr7 as decimal(10,2),",
+				"          Curr8 as decimal(10,2),",
+				"          Curr9 as decimal(10,2),",
+				"          Curr10 as decimal(10,2),",
+				"          Curr11 as decimal(10,2),",
+				"          Curr12 as decimal(10,2),",
+				"          Curr13 as decimal(10,2),",
+				"          Curr14 as decimal(10,2),",
+				"          Curr15 as decimal(10,2)",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
 			]
 		}
 	}
