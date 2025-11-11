@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "*.csv",
+				"fileName": "uber_weekly.csv",
 				"folderPath": "ubereats_toprocess",
 				"container": "adftutorial"
 			},
