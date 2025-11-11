@@ -1,0 +1,17 @@
+{
+	"name": "ADFDemoDB",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "adfdemo-dbserver.database.windows.net",
+			"database": "adfdemo-db-jsn1971",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "adfdemo-admin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEZDNTU4NDYyLUExOTItNDg1Mi1CMjBFLUM4MENGQ0NGMjI2Nl83OTBjNDUyYS03NmVkLTRiOGItYjIzOC1hNmM0ZTQ5YmE3YWEiDQp9"
+		}
+	}
+}
