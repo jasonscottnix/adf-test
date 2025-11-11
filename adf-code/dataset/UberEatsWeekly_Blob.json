@@ -1,0 +1,165 @@
+{
+	"name": "UberEatsWeekly_Blob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureStorageLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "*.csv",
+				"folderPath": "ubereats_toprocess",
+				"container": "adftutorial"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Store Name",
+				"type": "String"
+			},
+			{
+				"name": "Shop ID",
+				"type": "String"
+			},
+			{
+				"name": "Store ID",
+				"type": "String"
+			},
+			{
+				"name": "Order Count",
+				"type": "String"
+			},
+			{
+				"name": "Count of Misc payment",
+				"type": "String"
+			},
+			{
+				"name": "Sales (excl. tax)",
+				"type": "String"
+			},
+			{
+				"name": "Tax on Sales",
+				"type": "String"
+			},
+			{
+				"name": "Sales (incl. tax)",
+				"type": "String"
+			},
+			{
+				"name": "Order Error Adjustments",
+				"type": "String"
+			},
+			{
+				"name": "Tax on Order Error Adjustments",
+				"type": "String"
+			},
+			{
+				"name": "Order Error Adjustments (incl. tax)",
+				"type": "String"
+			},
+			{
+				"name": "Price adjustments (excl. tax)",
+				"type": "String"
+			},
+			{
+				"name": "Tax on Price Adjustments",
+				"type": "String"
+			},
+			{
+				"name": "Price Adjustments (incl. tax)",
+				"type": "String"
+			},
+			{
+				"name": "Offers on items (incl. tax)",
+				"type": "String"
+			},
+			{
+				"name": "Tax On Offers on items",
+				"type": "String"
+			},
+			{
+				"name": "Delivery Offer Redemptions (incl. tax)",
+				"type": "String"
+			},
+			{
+				"name": "Tax On Delivery Offer Redemptions",
+				"type": "String"
+			},
+			{
+				"name": "Marketing Adjustment",
+				"type": "String"
+			},
+			{
+				"name": "Bag Fee",
+				"type": "String"
+			},
+			{
+				"name": "Marketplace Fee",
+				"type": "String"
+			},
+			{
+				"name": "Tax on Marketplace Fee",
+				"type": "String"
+			},
+			{
+				"name": "Add on Marketplace fee",
+				"type": "String"
+			},
+			{
+				"name": "Tax on Add on Marketplace fee",
+				"type": "String"
+			},
+			{
+				"name": "Delivery Network Fee",
+				"type": "String"
+			},
+			{
+				"name": "Tax on Delivery Network Fee",
+				"type": "String"
+			},
+			{
+				"name": "Order Processing Fee",
+				"type": "String"
+			},
+			{
+				"name": "Total Sales after Adjustments (incl tax)",
+				"type": "String"
+			},
+			{
+				"name": "Capital payments",
+				"type": "String"
+			},
+			{
+				"name": "Other payments",
+				"type": "String"
+			},
+			{
+				"name": "Marketplace Facilitator Tax",
+				"type": "String"
+			},
+			{
+				"name": "Backup Withholding Tax",
+				"type": "String"
+			},
+			{
+				"name": "Total payout ",
+				"type": "String"
+			},
+			{
+				"name": "Payout Date",
+				"type": "String"
+			},
+			{
+				"name": "Payout reference ID",
+				"type": "String"
+			}
+		]
+	}
+}
