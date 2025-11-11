@@ -1,0 +1,157 @@
+{
+	"name": "ADFDemoUberWeeklyStaging",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADFDemoDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "RowId",
+				"type": "decimal",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "BatchLogId",
+				"type": "decimal",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "StoreName",
+				"type": "varchar"
+			},
+			{
+				"name": "ShopID",
+				"type": "varchar"
+			},
+			{
+				"name": "StoreID",
+				"type": "varchar"
+			},
+			{
+				"name": "OrderCount",
+				"type": "varchar"
+			},
+			{
+				"name": "CountOfMiscPayment",
+				"type": "varchar"
+			},
+			{
+				"name": "FoodSalesExcludingTax",
+				"type": "varchar"
+			},
+			{
+				"name": "TaxOnFoodSales",
+				"type": "varchar"
+			},
+			{
+				"name": "FoodSalesIncludingTax",
+				"type": "varchar"
+			},
+			{
+				"name": "AdjustmentsExcludingTax",
+				"type": "varchar"
+			},
+			{
+				"name": "TaxOnAdjustments",
+				"type": "varchar"
+			},
+			{
+				"name": "AdjustmentsIncludingTax",
+				"type": "varchar"
+			},
+			{
+				"name": "PromoSpendOnFood",
+				"type": "varchar"
+			},
+			{
+				"name": "TaxOnPromotionOnFood",
+				"type": "varchar"
+			},
+			{
+				"name": "SpecialOfferDelivery",
+				"type": "varchar"
+			},
+			{
+				"name": "TaxOnSpecialOfferDelivery",
+				"type": "varchar"
+			},
+			{
+				"name": "MarketingServiceFeeAdjustment",
+				"type": "varchar"
+			},
+			{
+				"name": "BagFee",
+				"type": "varchar"
+			},
+			{
+				"name": "UberServiceFee",
+				"type": "varchar"
+			},
+			{
+				"name": "DeliveryNetworkFee",
+				"type": "varchar"
+			},
+			{
+				"name": "OrderProcessingFee",
+				"type": "varchar"
+			},
+			{
+				"name": "TotalSalesAfterAdjustmentsIncludingTax",
+				"type": "varchar"
+			},
+			{
+				"name": "MiscellaneousPayments",
+				"type": "varchar"
+			},
+			{
+				"name": "MarketplaceFacilitatorTax",
+				"type": "varchar"
+			},
+			{
+				"name": "BackupWithholdingTax",
+				"type": "varchar"
+			},
+			{
+				"name": "Payout",
+				"type": "varchar"
+			},
+			{
+				"name": "PayoutDate",
+				"type": "varchar"
+			},
+			{
+				"name": "PayoutReferenceID",
+				"type": "varchar"
+			},
+			{
+				"name": "RefundsExcludingTax",
+				"type": "varchar"
+			},
+			{
+				"name": "TaxOnRefunds",
+				"type": "varchar"
+			},
+			{
+				"name": "RefundsIncludingTax",
+				"type": "varchar"
+			},
+			{
+				"name": "TaxOnMarketplaceFee",
+				"type": "varchar"
+			},
+			{
+				"name": "TaxOnDeliveryNetworkFee",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Uber2_PayoutSummary_Staging"
+		}
+	}
+}
