@@ -1,0 +1,203 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Store Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "StoreName",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Shop ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ShopID",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Store ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "StoreID",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order Count",
+									"type": "String"
+								},
+								"sink": {
+									"name": "OrderCount",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Count of Misc payment",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CountOfMiscPayment",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Sales (excl. tax)",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FoodSalesExcludingTax",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Sales",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TaxOnFoodSales",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Sales (incl. tax)",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FoodSalesIncludingTax",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order Error Adjustments",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AdjustmentsExcludingTax",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Order Error Adjustments",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TaxOnAdjustments",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order Error Adjustments (incl. tax)",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AdjustmentsIncludingTax",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Price adjustments (excl. tax)",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PromoSpendOnFood",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Price Adjustments",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TaxOnPromotionOnFood",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Offers on items (incl. tax)",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SpecialOfferDelivery",
+									"type": "varchar"
+								}
+							},
+							null
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "UberEatsWeekly_Blob",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ADFDemoUberWeeklyStaging",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
