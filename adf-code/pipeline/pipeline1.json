@@ -437,7 +437,7 @@
 					"storedProcedureName": "[dbo].[usp_GenerateBatchId]",
 					"storedProcedureParameters": {
 						"BatchId": {
-							"value": "1",
+							"value": null,
 							"type": "Int32"
 						}
 					}
