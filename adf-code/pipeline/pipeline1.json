@@ -42,7 +42,8 @@
 								},
 								"sink": {
 									"name": "StoreName",
-									"type": "varchar"
+									"type": "varchar",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -52,7 +53,8 @@
 								},
 								"sink": {
 									"name": "ShopID",
-									"type": "varchar"
+									"type": "varchar",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -62,7 +64,8 @@
 								},
 								"sink": {
 									"name": "StoreID",
-									"type": "varchar"
+									"type": "varchar",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -72,7 +75,8 @@
 								},
 								"sink": {
 									"name": "OrderCount",
-									"type": "varchar"
+									"type": "varchar",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -82,100 +86,10 @@
 								},
 								"sink": {
 									"name": "CountOfMiscPayment",
-									"type": "varchar"
+									"type": "varchar",
+									"physicalType": "varchar"
 								}
-							},
-							{
-								"source": {
-									"name": "Sales (excl. tax)",
-									"type": "String"
-								},
-								"sink": {
-									"name": "FoodSalesExcludingTax",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Tax on Sales",
-									"type": "String"
-								},
-								"sink": {
-									"name": "TaxOnFoodSales",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Sales (incl. tax)",
-									"type": "String"
-								},
-								"sink": {
-									"name": "FoodSalesIncludingTax",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Order Error Adjustments",
-									"type": "String"
-								},
-								"sink": {
-									"name": "AdjustmentsExcludingTax",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Tax on Order Error Adjustments",
-									"type": "String"
-								},
-								"sink": {
-									"name": "TaxOnAdjustments",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Order Error Adjustments (incl. tax)",
-									"type": "String"
-								},
-								"sink": {
-									"name": "AdjustmentsIncludingTax",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Price adjustments (excl. tax)",
-									"type": "String"
-								},
-								"sink": {
-									"name": "PromoSpendOnFood",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Tax on Price Adjustments",
-									"type": "String"
-								},
-								"sink": {
-									"name": "TaxOnPromotionOnFood",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Offers on items (incl. tax)",
-									"type": "String"
-								},
-								"sink": {
-									"name": "SpecialOfferDelivery",
-									"type": "varchar"
-								}
-							},
-							null
+							}
 						],
 						"typeConversion": true,
 						"typeConversionSettings": {
