@@ -276,6 +276,83 @@
 									"type": "varchar",
 									"physicalType": "varchar"
 								}
+							},
+							{
+								"source": {
+									"name": "Marketplace Facilitator Tax",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MarketplaceFacilitatorTax",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Backup Withholding Tax",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BackupWithholdingTax",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Total payout ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Payout",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Payout Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PayoutDate",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Payout reference ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PayoutReferenceID",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Delivery Network Fee",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TaxOnDeliveryNetworkFee",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Marketplace Fee",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TaxOnMarketplaceFee",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
 							}
 						],
 						"typeConversion": true,
