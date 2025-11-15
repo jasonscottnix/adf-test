@@ -427,11 +427,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [
-					{
-						"name": "batchID"
-					}
-				],
+				"userProperties": [],
 				"typeProperties": {
 					"storedProcedureName": "[dbo].[usp_GenerateBatchId]",
 					"storedProcedureParameters": {
