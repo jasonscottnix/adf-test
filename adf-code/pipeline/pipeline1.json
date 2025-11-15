@@ -5,14 +5,9 @@
 			{
 				"name": "Copy data1",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "Set variable1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -453,21 +448,16 @@
 			{
 				"name": "Set variable1",
 				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "Get batch ID",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [],
 				"policy": {
 					"secureOutput": false,
 					"secureInput": false
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "BatchID",
+					"variableName": "BatchId",
 					"value": {
 						"value": "@activity('Get batch ID').output",
 						"type": "Expression"
@@ -476,7 +466,7 @@
 			}
 		],
 		"variables": {
-			"BatchID": {
+			"BatchId": {
 				"type": "Integer"
 			}
 		},
