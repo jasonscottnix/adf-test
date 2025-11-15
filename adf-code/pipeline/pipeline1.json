@@ -209,40 +209,6 @@
 							},
 							{
 								"source": {
-									"name": "Price Adjustments (incl. tax)",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Offers on items (incl. tax)",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Tax On Offers on items",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "SpecialOfferDelivery",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
 									"name": "Delivery Offer Redemptions (incl. tax)",
 									"type": "String",
 									"physicalType": "String"
