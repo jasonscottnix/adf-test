@@ -155,6 +155,127 @@
 									"type": "varchar",
 									"physicalType": "varchar"
 								}
+							},
+							{
+								"source": {
+									"name": "Price adjustments (excl. tax)",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PromoSpendOnFood",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Price Adjustments",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TaxOnPromotionOnFood",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Delivery Offer Redemptions (incl. tax)",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SpecialOfferDelivery",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax On Delivery Offer Redemptions",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TaxOnSpecialOfferDelivery",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Marketing Adjustment",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MarketingServiceFeeAdjustment",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Bag Fee",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BagFee",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Marketplace Fee",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UberServiceFee",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Delivery Network Fee",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DeliveryNetworkFee",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order Processing Fee",
+									"type": "String"
+								},
+								"sink": {
+									"name": "OrderProcessingFee",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Total Sales after Adjustments (incl tax)",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TotalSalesAfterAdjustmentsIncludingTax",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Other payments",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MiscellaneousPayments",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
 							}
 						],
 						"typeConversion": true,
