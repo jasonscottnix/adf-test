@@ -5,7 +5,14 @@
 			{
 				"name": "Copy data1",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -17,6 +24,15 @@
 				"typeProperties": {
 					"source": {
 						"type": "DelimitedTextSource",
+						"additionalColumns": [
+							{
+								"name": "BatchId",
+								"value": {
+									"value": "@variables('BatchID')",
+									"type": "Expression"
+								}
+							}
+						],
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
@@ -34,327 +50,6 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "Store Name",
-									"type": "String"
-								},
-								"sink": {
-									"name": "StoreName",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Shop ID",
-									"type": "String"
-								},
-								"sink": {
-									"name": "ShopID",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Store ID",
-									"type": "String"
-								},
-								"sink": {
-									"name": "StoreID",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Order Count",
-									"type": "String"
-								},
-								"sink": {
-									"name": "OrderCount",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Count of Misc payment",
-									"type": "String"
-								},
-								"sink": {
-									"name": "CountOfMiscPayment",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Sales (excl. tax)",
-									"type": "String"
-								},
-								"sink": {
-									"name": "FoodSalesExcludingTax",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Tax on Sales",
-									"type": "String"
-								},
-								"sink": {
-									"name": "TaxOnFoodSales",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Sales (incl. tax)",
-									"type": "String"
-								},
-								"sink": {
-									"name": "FoodSalesIncludingTax",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Order Error Adjustments",
-									"type": "String"
-								},
-								"sink": {
-									"name": "AdjustmentsExcludingTax",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Tax on Order Error Adjustments",
-									"type": "String"
-								},
-								"sink": {
-									"name": "TaxOnAdjustments",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Order Error Adjustments (incl. tax)",
-									"type": "String"
-								},
-								"sink": {
-									"name": "AdjustmentsIncludingTax",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Price adjustments (excl. tax)",
-									"type": "String"
-								},
-								"sink": {
-									"name": "PromoSpendOnFood",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Tax on Price Adjustments",
-									"type": "String"
-								},
-								"sink": {
-									"name": "TaxOnPromotionOnFood",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Delivery Offer Redemptions (incl. tax)",
-									"type": "String"
-								},
-								"sink": {
-									"name": "SpecialOfferDelivery",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Tax On Delivery Offer Redemptions",
-									"type": "String"
-								},
-								"sink": {
-									"name": "TaxOnSpecialOfferDelivery",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Marketing Adjustment",
-									"type": "String"
-								},
-								"sink": {
-									"name": "MarketingServiceFeeAdjustment",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Bag Fee",
-									"type": "String"
-								},
-								"sink": {
-									"name": "BagFee",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Marketplace Fee",
-									"type": "String"
-								},
-								"sink": {
-									"name": "UberServiceFee",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Delivery Network Fee",
-									"type": "String"
-								},
-								"sink": {
-									"name": "DeliveryNetworkFee",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Order Processing Fee",
-									"type": "String"
-								},
-								"sink": {
-									"name": "OrderProcessingFee",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Total Sales after Adjustments (incl tax)",
-									"type": "String"
-								},
-								"sink": {
-									"name": "TotalSalesAfterAdjustmentsIncludingTax",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Other payments",
-									"type": "String"
-								},
-								"sink": {
-									"name": "MiscellaneousPayments",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Marketplace Facilitator Tax",
-									"type": "String"
-								},
-								"sink": {
-									"name": "MarketplaceFacilitatorTax",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Backup Withholding Tax",
-									"type": "String"
-								},
-								"sink": {
-									"name": "BackupWithholdingTax",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Total payout ",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Payout",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Payout Date",
-									"type": "String"
-								},
-								"sink": {
-									"name": "PayoutDate",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Payout reference ID",
-									"type": "String"
-								},
-								"sink": {
-									"name": "PayoutReferenceID",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Tax on Delivery Network Fee",
-									"type": "String"
-								},
-								"sink": {
-									"name": "TaxOnDeliveryNetworkFee",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Tax on Marketplace Fee",
-									"type": "String"
-								},
-								"sink": {
-									"name": "TaxOnMarketplaceFee",
-									"type": "varchar",
-									"physicalType": "varchar"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -374,8 +69,66 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Get batch ID",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "batchID"
+					}
+				],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[usp_GenerateBatchId]",
+					"storedProcedureParameters": {
+						"BatchId": {
+							"type": "Int32"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "ADFDemoDB",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Get batch ID",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "BatchID",
+					"value": {
+						"value": "@activity('Get batch ID').output",
+						"type": "Expression"
+					}
+				}
 			}
 		],
+		"variables": {
+			"BatchID": {
+				"type": "Integer"
+			}
+		},
 		"annotations": []
 	}
 }
