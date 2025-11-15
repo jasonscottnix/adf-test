@@ -89,6 +89,39 @@
 									"type": "varchar",
 									"physicalType": "varchar"
 								}
+							},
+							{
+								"source": {
+									"name": "Sales (excl. tax)",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FoodSalesExcludingTax",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Sales",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TaxOnFoodSales",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Sales (incl. tax)",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FoodSalesIncludingTax",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
 							}
 						],
 						"typeConversion": true,
