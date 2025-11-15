@@ -122,6 +122,39 @@
 									"type": "varchar",
 									"physicalType": "varchar"
 								}
+							},
+							{
+								"source": {
+									"name": "Order Error Adjustments",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AdjustmentsExcludingTax",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Order Error Adjustments",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TaxOnAdjustments",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order Error Adjustments (incl. tax)",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AdjustmentsIncludingTax",
+									"type": "varchar",
+									"physicalType": "varchar"
+								}
 							}
 						],
 						"typeConversion": true,
