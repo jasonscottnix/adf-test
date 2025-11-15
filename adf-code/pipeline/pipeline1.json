@@ -50,6 +50,420 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Store Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "StoreName",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Shop ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ShopID",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Store ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "StoreID",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order Count",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "OrderCount",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Count of Misc payment",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CountOfMiscPayment",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Sales (excl. tax)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FoodSalesExcludingTax",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Sales",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TaxOnFoodSales",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Sales (incl. tax)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FoodSalesIncludingTax",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order Error Adjustments",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AdjustmentsExcludingTax",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Order Error Adjustments",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TaxOnAdjustments",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order Error Adjustments (incl. tax)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AdjustmentsIncludingTax",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Price adjustments (excl. tax)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PromoSpendOnFood",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Price Adjustments",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TaxOnPromotionOnFood",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Price Adjustments (incl. tax)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Offers on items (incl. tax)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax On Offers on items",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SpecialOfferDelivery",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Delivery Offer Redemptions (incl. tax)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TaxOnSpecialOfferDelivery",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax On Delivery Offer Redemptions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MarketingServiceFeeAdjustment",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Marketing Adjustment",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BagFee",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Bag Fee",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UberServiceFee",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Marketplace Fee",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DeliveryNetworkFee",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Marketplace Fee",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "OrderProcessingFee",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Add on Marketplace fee",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TotalSalesAfterAdjustmentsIncludingTax",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Add on Marketplace fee",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MiscellaneousPayments",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Delivery Network Fee",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MarketplaceFacilitatorTax",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax on Delivery Network Fee",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BackupWithholdingTax",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order Processing Fee",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Payout",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Total Sales after Adjustments (incl tax)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PayoutDate",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Capital payments",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PayoutReferenceID",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Other payments",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RefundsExcludingTax",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Marketplace Facilitator Tax",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TaxOnRefunds",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Backup Withholding Tax",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RefundsIncludingTax",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Total payout ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TaxOnMarketplaceFee",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Payout Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TaxOnDeliveryNetworkFee",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "BatchId",
+									"type": "String"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
