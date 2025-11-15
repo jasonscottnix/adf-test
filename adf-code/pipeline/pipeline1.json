@@ -214,7 +214,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "TaxOnSpecialOfferDelivery",
+									"name": "SpecialOfferDelivery",
 									"type": "String",
 									"physicalType": "varchar"
 								}
@@ -226,7 +226,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "MarketingServiceFeeAdjustment",
+									"name": "TaxOnSpecialOfferDelivery",
 									"type": "String",
 									"physicalType": "varchar"
 								}
@@ -238,7 +238,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "BagFee",
+									"name": "MarketingServiceFeeAdjustment",
 									"type": "String",
 									"physicalType": "varchar"
 								}
@@ -250,7 +250,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "UberServiceFee",
+									"name": "BagFee",
 									"type": "String",
 									"physicalType": "varchar"
 								}
@@ -262,7 +262,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "DeliveryNetworkFee",
+									"name": "UberServiceFee",
 									"type": "String",
 									"physicalType": "varchar"
 								}
@@ -274,7 +274,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "OrderProcessingFee",
+									"name": "TaxOnMarketplaceFee",
 									"type": "String",
 									"physicalType": "varchar"
 								}
@@ -406,8 +406,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "TaxOnMarketplaceFee",
-									"type": "String",
+									"name": "",
 									"physicalType": "varchar"
 								}
 							},
