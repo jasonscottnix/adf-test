@@ -281,36 +281,12 @@
 							},
 							{
 								"source": {
-									"name": "Add on Marketplace fee",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "TotalSalesAfterAdjustmentsIncludingTax",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Tax on Add on Marketplace fee",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "MiscellaneousPayments",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
 									"name": "Delivery Network Fee",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "MarketplaceFacilitatorTax",
+									"name": "DeliveryNetworkFee",
 									"type": "String",
 									"physicalType": "varchar"
 								}
@@ -322,7 +298,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "BackupWithholdingTax",
+									"name": "TaxOnDeliveryNetworkFee",
 									"type": "String",
 									"physicalType": "varchar"
 								}
@@ -334,7 +310,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Payout",
+									"name": "OrderProcessingFee",
 									"type": "String",
 									"physicalType": "varchar"
 								}
@@ -346,7 +322,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "PayoutDate",
+									"name": "TotalSalesAfterAdjustmentsIncludingTax",
 									"type": "String",
 									"physicalType": "varchar"
 								}
@@ -417,8 +393,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "TaxOnDeliveryNetworkFee",
-									"type": "String",
+									"name": "",
 									"physicalType": "varchar"
 								}
 							},
